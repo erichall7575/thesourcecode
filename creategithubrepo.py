@@ -20,5 +20,8 @@ if len(reponame)>5 and len(repodescription)>5:
     r = requests.post(github_url, data, auth=(cred[0], cred[1]))
 
     print(r.json)
-    
-print("Invalid Repository Name or Description.")
+
+elif len(reponame)<=5 and len(repodescription)<=5:     
+    print("Invalid Repository Name or Description.")
+
+
